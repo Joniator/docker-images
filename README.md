@@ -5,4 +5,3 @@
 Ansible image based on alpine.
 
 Latest: `ghcr.io/joniator/docker-ansible:latest`
-
