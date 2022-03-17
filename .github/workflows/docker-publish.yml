@@ -87,7 +87,8 @@ jobs:
             ${{ env.REGISTRY_GHCR }}/${{ env.IMAGE_NAME }}
             ${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{raw}},value==${{ steps.get_version.outputs.version }}
+            type=semver,pattern={{raw}},value=${{ steps.get_version.outputs.version }}
+            type=raw,value=latest
 
       # Build Docker image with Buildx 
       # https://github.com/docker/build-push-action
