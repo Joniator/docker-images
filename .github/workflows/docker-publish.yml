@@ -74,7 +74,7 @@ jobs:
       - name: Get latest version
         id: get_version
         run: |
-          VERSION="$(docker run --rm ansible:test sh -c 'ansible --version | head -n1 | grep -oE "\d+\.\d+\.\d+"')"
+          VERSION="v$(docker run --rm ansible:test sh -c 'ansible --version | head -n1 | grep -oE "\d+\.\d+\.\d+"')"
           echo "::set-output name=version::$VERSION"
 
       # Extract metadata (tags, labels) for Docker
@@ -87,7 +87,7 @@ jobs:
             ${{ env.REGISTRY_GHCR }}/${{ env.IMAGE_NAME }}
             ${{ env.IMAGE_NAME }}
           tags: |
-            type=pep440,pattern={{version}},value=1.0.0
+            type=semver,pattern={{raw}},value==${{ steps.get_version.outputs.version }}
 
       # Build Docker image with Buildx 
       # https://github.com/docker/build-push-action
