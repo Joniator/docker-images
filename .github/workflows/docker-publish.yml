@@ -74,7 +74,7 @@ jobs:
       - name: Get latest version
         id: get_version
         run: |
-          VERSION="$(docker run --rm -it ansible:test sh -c 'ansible --version | head -n1 | grep -oE "\d+\.\d+\.\d+"')"
+          VERSION="$(docker run --rm ansible:test sh -c 'ansible --version | head -n1 | grep -oE "\d+\.\d+\.\d+"')"
           echo "::set-output version=$VERSION"
 
       # Extract metadata (tags, labels) for Docker
