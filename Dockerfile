@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM alpine:edge
 
 LABEL maintainer="jonnyb@jonnyb.name"
 
