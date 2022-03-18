@@ -19,8 +19,11 @@ For ansible version ([list of tags here](https://github.com/Joniator/docker-imag
 
 # Included:
 
+### Base Image
 * alpine:edge
+
+### Packages
 * ansible
+* curl
 * openssh
 * openssl
-* curl
