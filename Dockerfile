@@ -1,5 +1,11 @@
 FROM alpine:edge
 
-LABEL maintainer="jonnyb@jonnyb.name"
+LABEL maintainer="Jonatha Boeckel <jonnyb@jonnyb.name>"
 
-RUN apk add --no-cache --upgrade ansible openssh openssl curl
+RUN apk add --no-cache --upgrade \
+    ansible \
+    curl \
+    git \
+    openssh \
+    openssl
+     

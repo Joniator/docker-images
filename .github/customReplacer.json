@@ -1,0 +1,17 @@
+[
+    {
+        "search": "{{ name }}",
+        "replace": "process.env.IMAGE_NAME",
+        "eval": true
+    },
+    {
+      "search": "{{ image_name }}",
+      "replace": "process.env.IMAGE_NAME",
+      "eval": true
+    },
+    {
+        "search": "{{ description }}",
+        "replace": "process.env.DESCRIPTION",
+        "eval": true
+      }
+  ]
