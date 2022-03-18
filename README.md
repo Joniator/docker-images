@@ -13,7 +13,7 @@ Latest:
 * GHCR: `ghcr.io/joniator/ansible:latest` 
 * Docker-Hub: `joniator/ansible:latest`
 
-For ansible version ([list of tags here](https://github.com/Joniator/docker-images/pkgs/container/{{ name }}))
+For ansible version ([list of tags here](https://github.com/Joniator/docker-images/pkgs/container/ansible))
 * GHCR: `ghcr.io/joniator/ansible:vx.x.x` 
 * Docker-Hub: `joniator/ansible:vx.x.x`
 
