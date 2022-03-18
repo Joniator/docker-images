@@ -2,12 +2,19 @@ FROM lscr.io/linuxserver/code-server
 
 LABEL maintainer="Jonatha Boeckel <jonnyb@jonnyb.name>"
 
+COPY root /
+
 RUN sudo apt-get update && \
 	apt-get install -y --no-install-recommends \
-    shellcheck \
-    software-properties-common \
-    yadm \
-    zsh && \
+        shellcheck \
+        software-properties-common \
+        yadm \
+        zsh && \
+# FiraCode
+    sed -i "s|</head>|\
+            <link rel="stylesheet" href="_static/src/browser/pages/firacode/FiraCode.css"> \n \
+        </head>|g" \
+        /app/code-server/vendor/modules/code-oss-dev/out/vs/code/browser/workbench/workbench.html && \
 # AWS Corretto JDK 17
     curl https://apt.corretto.aws/corretto.key | sudo apt-key add -  && \
     sudo add-apt-repository 'deb https://apt.corretto.aws stable main' && \
