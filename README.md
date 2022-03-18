@@ -19,5 +19,8 @@ For <APP_NAME> version ([list of tags here](https://github.com/Joniator/docker-i
 
 ## Included:
 
+### Base Image
 * alpine:edge
+
+### Packages
 * ...
