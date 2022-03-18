@@ -1,23 +1,28 @@
-# joniator/<APP_NAME>
+# joniator/code-server
 
-[![Build status](https://img.shields.io/github/workflow/status/Joniator/docker-images/Docker/<APP_NAME>)](https://github.com/Joniator/docker-images/actions/workflows/docker-publish.yml) 
-[![DockerHub Pulls](https://img.shields.io/docker/pulls/joniator/<APP_NAME>)](https://hub.docker.com/r/joniator/<APP_NAME>)
-![Docker Image Version](https://img.shields.io/docker/v/joniator/<APP_NAME>)
+[![Build status](https://img.shields.io/github/workflow/status/Joniator/docker-images/Docker/code-server)](https://github.com/Joniator/docker-images/actions/workflows/docker-publish.yml) 
+[![DockerHub Pulls](https://img.shields.io/docker/pulls/joniator/code-server)](https://hub.docker.com/r/joniator/code-server)
+![Docker Image Version](https://img.shields.io/docker/v/joniator/code-server)
 
-[Docker-Hub](https://hub.docker.com/r/joniator/<APP_NAME>)
+[Docker-Hub](https://hub.docker.com/r/joniator/code-server)
 
 ## Usage
-<DESCRIPTION>
+Code-Server image based on latest [linuxserver/code-server](https://github.com/linuxserver/docker-code-server) with some custom packages. This could be solved with mods, but they significantly increase the startup time.
 
 Latest: 
-* GHCR: `ghcr.io/joniator/<APP_NAME>:latest` 
-* Docker-Hub: `joniator/<APP_NAME>:latest`
+* GHCR: `ghcr.io/joniator/code-server:latest` 
+* Docker-Hub: `joniator/code-server:latest`
 
-For <APP_NAME> version ([list of tags here](https://github.com/Joniator/docker-images/pkgs/container/<APP_NAME>))
-* GHCR: `ghcr.io/joniator/<APP_NAME>:vx.x.x` 
-* Docker-Hub: `joniator/<APP_NAME>:vx.x.x`
+For code-server version ([list of tags here](https://github.com/Joniator/docker-images/pkgs/container/code-server))
+* GHCR: `ghcr.io/joniator/code-server:vx.x.x` 
+* Docker-Hub: `joniator/code-server:vx.x.x`
 
 ## Included:
 
-* alpine:edge
-* ...
+* [linuxserver/code-server](https://github.com/linuxserver/docker-code-server)
+* ansible
+* java-17-amazon-corretto-jdk
+* shellcheck 
+* software-properties-common 
+* yadm 
+* zsh

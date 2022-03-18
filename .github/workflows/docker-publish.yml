@@ -10,15 +10,15 @@ on:
   schedule:
     - cron: '45 10 * * *'
   push:
-    branches: [ <APP_NAME> ]
+    branches: [ code-server ]
   pull_request:
-    branches: [ <APP_NAME> ]
+    branches: [ code-server ]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY_GHCR: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: joniator/<APP_NAME>
+  IMAGE_NAME: joniator/code-server
   DESCRIPTION: <DESCRIPTION>
 
 jobs:
