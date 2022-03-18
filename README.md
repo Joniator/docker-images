@@ -32,3 +32,4 @@ For code-server version ([list of tags here](https://github.com/Joniator/docker-
 
 ### Fonts
 * [FiraCode 6.2](https://github.com/tonsky/FiraCode)
+* [Cascadia Code 2111.01 Mono](https://github.com/microsoft/cascadia-code)

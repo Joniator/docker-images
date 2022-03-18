@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('CascadiaCode.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('CascadiaCodeItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('CascadiaCodePL.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('CascadiaCodePLItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+  
