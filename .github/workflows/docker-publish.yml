@@ -1,21 +1,17 @@
 name: Docker
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 on:
   workflow_dispatch:
   schedule:
     - cron: '45 10 * * *'
   push:
     branches: [ code-server ]
+    paths-ignore:
+      - '*.md'
   pull_request:
     branches: [ code-server ]
 
 env:
-  # Use docker.io for Docker Hub if empty
   REGISTRY_GHCR: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: joniator/code-server
