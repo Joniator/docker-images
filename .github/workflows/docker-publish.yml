@@ -10,16 +10,16 @@ on:
   schedule:
     - cron: '45 10 * * *'
   push:
-    branches: [ ansible ]
+    branches: [ <APP_NAME> ]
   pull_request:
-    branches: [ ansible ]
+    branches: [ <APP_NAME> ]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY_GHCR: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: joniator/ansible
-  DESCRIPTION: Ansible image based on alpine edge with commonly used packages to run playbooks with CI
+  IMAGE_NAME: joniator/<APP_NAME>
+  DESCRIPTION: <DESCRIPTION>
 
 jobs:
   build:
