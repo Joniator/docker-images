@@ -19,10 +19,16 @@ For code-server version ([list of tags here](https://github.com/Joniator/docker-
 
 ## Included:
 
+### Base Image
 * [linuxserver/code-server](https://github.com/linuxserver/docker-code-server)
+
+### Packages
 * ansible
 * java-17-amazon-corretto-jdk
 * shellcheck 
 * software-properties-common 
 * yadm 
 * zsh
+
+### Fonts
+* [FiraCode 6.2](https://github.com/tonsky/FiraCode)
