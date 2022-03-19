@@ -29,7 +29,3 @@ For code-server version ([list of tags here](https://github.com/Joniator/docker-
 * software-properties-common 
 * yadm 
 * zsh
-
-### Fonts
-* [PowerlineSymbols 2.8.2](https://github.com/powerline/powerline)
-* [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono)
