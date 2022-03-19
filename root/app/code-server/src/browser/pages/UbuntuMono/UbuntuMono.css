@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('UbuntuMono-Bold.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('UbuntuMono-BoldItalic.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+        font-family: 'Ubuntu Mono';
+    src: url('UbuntuMono-Italic.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('UbuntuMono-Regular.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}

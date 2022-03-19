@@ -12,10 +12,8 @@ RUN sudo apt-get update && \
         zsh && \
 # FiraCode
     sed -i "s|</head>|\
-            <link rel="stylesheet" href="_static/src/browser/pages/cascadia/CascadiaMono.css"> \n \
-            <link rel="stylesheet" href="_static/src/browser/pages/firacode/FiraCode.css"> \n \
-            <link rel="stylesheet" href="_static/src/browser/pages/firamono/FiraMono.css"> \n \
-            <link rel="stylesheet" href="_static/src/browser/pages/meslo/MesloLGS.css"> \n \
+            <link rel="stylesheet" href="_static/src/browser/pages/PowerlineSymbols/PowerlineSymbols.css"> \n \
+            <link rel="stylesheet" href="_static/src/browser/pages/UbuntuMono/UbuntuMono.css"> \n \
         </head>|g" \
         /app/code-server/vendor/modules/code-oss-dev/out/vs/code/browser/workbench/workbench.html && \
 # AWS Corretto JDK 17

@@ -31,7 +31,5 @@ For code-server version ([list of tags here](https://github.com/Joniator/docker-
 * zsh
 
 ### Fonts
-* [Cascadia Code 2111.01 Mono](https://github.com/microsoft/cascadia-code)
-* [FiraCode 6.2](https://github.com/tonsky/FiraCode)
-* [FiraMono NF v2.1.0](https://github.com/ryanoasis/nerd-fonts)
-* [Melos Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+* [PowerlineSymbols 2.8.2](https://github.com/powerline/powerline)
+* [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono)
