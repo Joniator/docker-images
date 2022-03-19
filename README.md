@@ -33,4 +33,5 @@ For code-server version ([list of tags here](https://github.com/Joniator/docker-
 ### Fonts
 * [Cascadia Code 2111.01 Mono](https://github.com/microsoft/cascadia-code)
 * [FiraCode 6.2](https://github.com/tonsky/FiraCode)
+* [FiraMono NF v2.1.0](https://github.com/ryanoasis/nerd-fonts)
 * [Melos Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
