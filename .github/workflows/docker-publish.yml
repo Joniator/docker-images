@@ -2,14 +2,14 @@ name: Docker
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '45 10 * * *'
-  push:
-    branches: [ <APP_NAME> ]    
-    paths-ignore:
-      - '*.md'
-  pull_request:
-    branches: [ <APP_NAME> ]
+  # schedule:
+  #   - cron: '45 10 * * *'
+  # push:
+  #   branches: [ <APP_NAME> ]    
+  #   paths-ignore:
+  #     - '*.md'
+  # pull_request:
+  #   branches: [ <APP_NAME> ]
 
 env:
   REGISTRY_GHCR: ghcr.io
