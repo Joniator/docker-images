@@ -40,8 +40,8 @@ Latest:
 * Docker-Hub: `joniator/vim:latest`
 
 For vim version ([list of tags here](https://github.com/Joniator/docker-images/pkgs/container/vim))
-* GHCR: `ghcr.io/joniator/vim:vx.x.x` 
-* Docker-Hub: `joniator/vim:vx.x.x`
+* GHCR: `ghcr.io/joniator/vim:vx.x`, `ghcr.io/joniator/vim:vx.x`
+* Docker-Hub: `joniator/vim:vx`, `joniator/vim:vx`
 
 ## Included:
 
