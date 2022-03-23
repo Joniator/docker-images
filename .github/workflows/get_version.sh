@@ -7,7 +7,7 @@ get_version () {
 
     _VERSION=$(docker run -t --entrypoint sh $IMAGE -c "$COMMAND")
 
-    echo "$_VERSION"
+    echo "v$_VERSION.0"
 }
 
 VERSION="$(get_version)"
