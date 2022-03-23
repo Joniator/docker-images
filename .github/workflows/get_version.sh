@@ -3,9 +3,9 @@
 IMAGE=${1:-"localimage:test"}
 
 get_version () {
-    COMMAND='<COMMAND>'
+    COMMAND='vim --version | head -n1 | grep -oE "\d+\.\d+"'
 
-    _VERSION=$(docker run --rm $IMAGE sh -c "$COMMAND")
+    _VERSION=$(docker run --entrypoint sh $IMAGE -c "$COMMAND")
     echo "v$_VERSION"
 }
 

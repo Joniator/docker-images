@@ -2,10 +2,9 @@ FROM alpine:edge
 
 LABEL maintainer="Jonatha Boeckel <jonnyb@jonnyb.name>"
 
+WORKDIR /mount
+
 RUN apk add --no-cache --upgrade \
-    ansible \
-    curl \
-    git \
-    openssh \
-    openssl
+    vim
      
+ENTRYPOINT [ "/usr/bin/vim", "/mount" ] 
