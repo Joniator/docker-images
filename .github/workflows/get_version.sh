@@ -6,7 +6,8 @@ get_version () {
     COMMAND='vim --version | head -n1 | grep -oE "\d+\.\d+"'
 
     _VERSION=$(docker run -t --entrypoint sh $IMAGE -c "$COMMAND")
-    echo "v$_VERSION"
+
+    echo "$_VERSION"
 }
 
 VERSION="$(get_version)"
