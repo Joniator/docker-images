@@ -60,4 +60,4 @@ while true; do
     esac
 done
 
-echo docker run -it --rm -v "$VOLUME:/mount" $IMAGE:$TAG ${@:-.}
+docker run -it --rm -v "$VOLUME:/mount" $IMAGE:$TAG ${@:-.}
