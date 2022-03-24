@@ -7,4 +7,4 @@ WORKDIR /mount
 RUN apk add --no-cache --upgrade \
     vim
      
-ENTRYPOINT [ "/usr/bin/vim", "/mount" ] 
+ENTRYPOINT [ "/usr/bin/vim" ] 

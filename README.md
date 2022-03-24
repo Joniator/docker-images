@@ -9,31 +9,9 @@
 ## Usage
 This image is meant to easily edit files in docker volumes. It provides a current version of vim, based on alpine:edge.
 
-I recommend to wrap in in a function in your .bashrc (or similiar)-File:
+I recommend to wrap in in a function in your .bashrc (or similiar)-File, see the file dvim.sh
 
-``` sh
-#######################################
-# Open a docker volume or path in a containerized vim.
-# Globals:
-#   DVIM_IMAGE: Name of the image/repo, Default ghcr
-#   DVIM_VERSION: Version/tag of the docker image, Default latest
-# Arguments:
-#   The docker volume name, file system path. Defaults to current directory.
-# Example usage:
-#   Open folder browser for docker volume "http_data":
-#     dvim http_data
-#   Open current directory:
-#     dvim
-#   Open /var/log from the host:
-#     dvim /var/log
-#######################################
-function dvim { 
-    IMAGE=${DVIM_IMAGE:-ghcr.io/joniator/vim}
-    VERSION=${DVIM_VERSION:-latest}
-    WORKDIR=${1:-"$PWD"}
-    docker run -it --rm -v "$WORKDIR:/mount" $IMAGE:$VERSION
-}
-```
+`curl https://raw.githubusercontent.com/Joniator/docker-images/vim/dvim.sh >> .bashrc`
 
 Latest: 
 * GHCR: `ghcr.io/joniator/vim:latest` 
