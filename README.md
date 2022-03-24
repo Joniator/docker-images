@@ -9,9 +9,9 @@
 ## Usage
 This image is meant to easily edit files in docker volumes. It provides a current version of vim, based on alpine:edge.
 
-I recommend to wrap in in a function in your .bashrc (or similiar)-File, see the file dvim.sh
+You can add the script to your path for easy access:
 
-`curl https://raw.githubusercontent.com/Joniator/docker-images/vim/dvim.sh >> .bashrc`
+`curl https://raw.githubusercontent.com/Joniator/docker-images/vim/dvim.sh > /usr/local/bin/dvim`
 
 Latest: 
 * GHCR: `ghcr.io/joniator/vim:latest` 
