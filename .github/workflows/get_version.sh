@@ -1,8 +1,9 @@
 #! /bin/sh
 
 get_version () {
-    git fetch --tags
-    _VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
+    _VERSION=$(curl --silent "https://api.github.com/repos/leonwind/cli2cloud/releases/latest" |
+    grep '"tag_name":' |
+    sed -E 's/.*"([^"]+)".*/\1/')
     echo "$_VERSION"
 }
 
