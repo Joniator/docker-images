@@ -2,19 +2,19 @@ name: Docker
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: '45 10 * * *'
-  # push:
-  #   branches: [ <APP_NAME> ]    
-  #   paths-ignore:
-  #     - '*.md'
-  # pull_request:
-  #   branches: [ <APP_NAME> ]
+  schedule:
+    - cron: '45 10 * * *'
+  push:
+    branches: [ cli2cloud ]    
+    paths-ignore:
+      - '*.md'
+  pull_request:
+    branches: [ cli2cloud ]
 
 env:
   REGISTRY_GHCR: ghcr.io
-  IMAGE_NAME: joniator/<APP_NAME>
-  DESCRIPTION: <DESCRIPTION>
+  IMAGE_NAME: joniator/cli2cloud
+  DESCRIPTION: https://github.com/leonwind/cli2cloud
 
 jobs:
   build:
@@ -64,12 +64,6 @@ jobs:
           load: true
           tags: localimage:test
 
-      # Get latest version from https://pkgs.alpinelinux.org/
-      - name: Get latest version
-        id: get_version
-        run: |
-          sh .github/workflows/get_version.sh
-
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
@@ -80,9 +74,9 @@ jobs:
             ${{ env.REGISTRY_GHCR }}/${{ env.IMAGE_NAME }}
             ${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern=v{{major}},value=${{ steps.get_version.outputs.version }}
-            type=semver,pattern=v{{major}}.{{minor}},value=${{ steps.get_version.outputs.version }}
-            type=semver,pattern=v{{major}}.{{minor}}.{{patch}},value=${{ steps.get_version.outputs.version }}
+            type=semver,pattern=v{{major}},value=${{ steps.build.outputs.version }}
+            type=semver,pattern=v{{major}}.{{minor}},value=${{ steps.build.outputs.version }}
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}},value=${{ steps.build.outputs.version }}
           labels: |
             org.opencontainers.image.description=${{ env.DESCRIPTION }}
 
