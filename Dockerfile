@@ -1,5 +1,7 @@
 FROM alpine:edge as BUILD
 
+ARG VERSION
+
 WORKDIR /go/src
 
 RUN apk add --no-cache --upgrade \
@@ -8,10 +10,7 @@ RUN apk add --no-cache --upgrade \
 RUN git clone https://github.com/leonwind/cli2cloud.git .
 WORKDIR /go/src/service
 
-RUN git fetch --tags && \
-    latestTag=$(git describe --tags `git rev-list --tags --max-count=1`) && \
-    git checkout $latestTag && \
-    echo "::set-output name=version::$latestTag"
+RUN git checkout "${VERSION}"
 
 RUN go mod download 
 RUN go build -o /go/bin/cli2cloud

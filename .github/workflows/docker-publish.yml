@@ -54,6 +54,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      # Get latest version from https://pkgs.alpinelinux.org/
+      - name: Get latest version
+        id: get_version
+        run: |
+          sh .github/workflows/get_version.sh
+
       # Build Docker image with Buildx 
       # https://github.com/docker/build-push-action
       - name: Build Docker image
@@ -62,6 +68,8 @@ jobs:
         with:
           context: .
           load: true
+          build-args: |
+            VERSION=${{ steps.build.get_version.version }}
           tags: localimage:test
 
       # Extract metadata (tags, labels) for Docker
@@ -74,9 +82,9 @@ jobs:
             ${{ env.REGISTRY_GHCR }}/${{ env.IMAGE_NAME }}
             ${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern=v{{major}},value=${{ steps.build.outputs.version }}
-            type=semver,pattern=v{{major}}.{{minor}},value=${{ steps.build.outputs.version }}
-            type=semver,pattern=v{{major}}.{{minor}}.{{patch}},value=${{ steps.build.outputs.version }}
+            type=semver,pattern=v{{major}},value=${{ steps.get_version.outputs.version }}
+            type=semver,pattern=v{{major}}.{{minor}},value=${{ steps.get_version.outputs.version }}
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}},value=${{ steps.get_version.outputs.version }}
           labels: |
             org.opencontainers.image.description=${{ env.DESCRIPTION }}
 
