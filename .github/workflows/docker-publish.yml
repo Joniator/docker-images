@@ -58,7 +58,7 @@ jobs:
       - name: Get latest version
         id: get_version
         run: |
-          sh .github/workflows/get_version.sh
+          .github/workflows/get_version.sh
 
       # Build Docker image with Buildx 
       # https://github.com/docker/build-push-action
